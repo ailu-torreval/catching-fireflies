@@ -1,0 +1,903 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Patrick+Hand&family=Patrick+Hand+SC&display=swap');
+
+/* order in the code: 
+asset list page style
+not related to the game
+hidden screens
+game- ui elements (lives bar/ score bar)
+sprites
+positions
+animations
+media query*/
+
+
+/* asset list page style */
+#asset-list {
+    margin-left: 3vw;
+    color: #ffe600;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 2rem;
+
+}
+
+#buttons {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 1.4rem;
+}
+
+#audio-list {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+#audio-list p {
+    padding-left: 6vw;
+}
+
+/* not related to the game */
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(#0b1942, #333f78, #774e62);
+}
+
+#main-game {
+    display: grid;
+    grid-template-areas: "game info";
+    grid-gap: 5vw;
+    grid-template-columns: 65% 1fr;
+}
+
+
+aside {
+    margin-right: 3vw;
+    grid-area: info;
+    color: #ffe600;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.4rem;
+}
+
+aside p {
+    padding-top: 3vw;
+    font-style: italic;
+    font-size: 20px;
+}
+
+
+ul {
+    width: 75vw;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.4rem;
+}
+
+li {
+    margin-right: 25px;
+}
+
+a {
+    text-decoration: none;
+    color: #ffe600;
+
+}
+
+/* hidden screens */
+
+#load-game {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/assets/load-screen1.svg");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 70;
+}
+
+
+
+#blur {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/assets/bg-blue1.svg");
+    background-size: 100%;
+    filter: blur(4px);
+}
+
+#title_screen {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/assets/titles1.svg");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#play {
+    position: absolute;
+    background-image: url("/assets/ui-play.svg");
+    background-size: 44%;
+    background-position: left;
+    background-repeat: no-repeat;
+    width: 8vw;
+    height: 3vw;
+    left: 34vw;
+    top: 19vw;
+}
+
+#how-to-play {
+    position: absolute;
+    background-image: url("/assets/ui-instructions.svg");
+    background-size: 27%;
+    background-position: left;
+    background-repeat: no-repeat;
+    width: 14vw;
+    height: 3vw;
+    top: 22vw;
+    left: 30vw;
+}
+
+#instructions {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/assets/instractions.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#instructions-deco {
+    position: absolute;
+    border-color:cyan 2px solid;
+    border-radius: 3vw;
+    height: 100%;
+    width: 100%;
+    padding-left: 2.2vw;
+    padding-top: 3.3vw; 
+    background-image: url("/assets/instructions-deco.svg");
+    background-size: 88%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#close-button {
+    position: absolute;
+    background-image: url("/assets/ui-close-button.svg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 3vw;
+    height: 3vw;
+    top: 6.8vw;
+    left: 44vw;
+    z-index: 60;
+}
+
+#instructions-txt {
+    position: absolute;
+    border-radius: 3vw;
+     /* height: 100%; */
+     padding-right: 10vw;
+     /* width: 100%; */
+     width: 1;
+     margin-left: 19vw;
+     margin-right: 100px;
+     margin-top: 10vw;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.65rem;
+    color: #c04a22;
+}
+#lets-play {
+    position: absolute;
+    background-image: url("/assets/ui-play.svg");
+    background-size: 30%;
+    background-position: left;
+    background-repeat: no-repeat;
+    width: 11vw;
+    height: 3vw;
+    top: 27.8vw;
+    left: 27vw;
+}
+
+#win_game {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/assets/win-game2.svg");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#win-txt {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    width: 1;
+    margin-left: 19vw;
+    margin-right: 100px;
+    margin-top: 14vw;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.78rem;
+    color: #c04a22;
+
+}
+
+#play-again {
+    position: absolute;
+    background-image: url("/assets/ui-play-again.svg");
+    background-size: 28%;
+    background-repeat: no-repeat;
+    background-position: left;
+    width: 15vw;
+    height: 3vw;
+    top: 26.4vw;
+    left: 25.3vw;
+}
+
+#game_over {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/assets/game-over2.svg");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#oh-no-txt {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    width: 1;
+    margin-left: 22vw;
+    margin-right: 100px;
+    margin-top: 13vw;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.65rem;
+    color: #c04a22;
+}
+
+#haunted-txt {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    width: 1;
+    margin-left: 18vw;
+    margin-right: 100px;
+    margin-top: 23vw;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.55rem;
+    color: #c04a22;
+}
+
+#try_again {
+    position: absolute;
+    background-image: url("/assets/ui-play-again.svg");
+    background-size: 28%;
+    background-repeat: no-repeat;
+    background-position: left;
+    width: 15vw;
+    height: 3vw;
+    top: 26.4vw;
+    left: 25.3vw;
+}
+
+#time_over {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/assets/time-over2.svg");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#time-out-txt {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    width: 1;
+    margin-left: 19vw;
+    margin-right: 100px;
+    margin-top: 14vw;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.78rem;
+    color: #c04a22;
+}
+
+#try-again {
+    position: absolute;
+    background-image: url("/assets/ui-play-again.svg");
+    background-size: 28%;
+    background-repeat: no-repeat;
+    background-position: left;
+    width: 15vw;
+    height: 3vw;
+    top: 26.4vw;
+    left: 25.3vw;
+}
+
+
+.hidden {
+    visibility: hidden;
+}
+
+/* game related */
+
+#screen {
+    position: relative;
+    margin-left: 25px;
+    grid-area: game;
+    width: 64vw;
+    height: 36vw;
+    border: 4px black solid;
+    overflow: hidden;
+}
+
+#game {
+    width: 100%;
+    height: 100%;
+}
+
+#game_background {
+    width: 100%;
+    height: 100%;
+    background-image: url("/assets/bg-blue1.svg");
+    background-size: 100%;
+}
+#game_sprites {
+    width: 100%;
+    height: 100%;
+}
+#game_foreground {
+    position: absolute;
+    top: 17vw;
+    left: 53vw;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: url("/assets/koki-4.svg");
+    background-repeat: no-repeat;
+    background-size: 15%;
+}
+#game_ui {
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+#score_board, #health_board, #time_board {
+    width: 20vw;
+    height: 6vw;
+    padding-left:1vw;
+    font-family: 'Patrick Hand', cursive;
+    color: #0b1942;
+}
+
+#score_board {
+text-align: center;
+color: #ffe600;
+font-size: 1.5rem;
+}
+
+#time_board {
+    background-image: url("/assets/ui-timer2.svg");
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-position: 7.8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffe600;
+    font-size: 2.5rem;
+}
+
+/* settings */
+#settings {
+    position: absolute;
+    height: 7vw;
+    width: 4vw;
+    top: 30vw;
+    background-image: url("/assets/ui-settings.svg");
+    background-repeat: no-repeat;
+    background-size: 107%;
+    background-position: center;
+}
+
+#music-on {
+    position: absolute;
+    height: 7vw;
+    width: 4vw;
+    top: 30vw;
+    left: 4vw;
+    background-image: url("/assets/ui-music-on.svg");
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position: center;
+}
+#music-off {
+    position: absolute;
+    height: 7vw;
+    width: 4vw;
+    top: 30vw;
+    left: 4vw;
+    background-image: url("/assets/ui-music-off.svg");
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position: center;
+}
+#sound-on {
+    position: absolute;
+    height: 7vw;
+    width: 4vw;
+    top: 30vw;
+    left: 8vw;
+    background-image: url("/assets/ui-sound-on.svg");
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position: center;
+}
+#sound-off {
+    position: absolute;
+    height: 7vw;
+    width: 4vw;
+    top: 30vw;
+    left: 8vw;
+    background-image: url("/assets/ui-sound-off.svg");
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position: center;
+}
+ /* intro settings */
+ #intromusic-on, #intro-music-on {
+    position: absolute;
+    height: 7vw;
+    width: 4vw;
+    top: 30vw;
+    background-image: url("/assets/ui-music-on.svg");
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position: center;
+ }
+
+ #intromusic-off, #intro-music-off {
+    position: absolute;
+    height: 7vw;
+    width: 4vw;
+    top: 30vw;
+    background-image: url("/assets/ui-music-off.svg");
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position: center;
+ }
+ 
+/*lives Bar*/
+
+.lives0 {
+    background-image: url("/assets/ui-0-lives.svg");
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+}
+.lives1 {
+    background-image: url("/assets/ui-1-life.svg");
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+}
+.lives2 {
+    background-image: url("/assets/ui-2-lives.svg");
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+}
+.lives3 {
+    background-image: url("/assets/ui-3-lives.svg");
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+}
+
+/* score bar */
+.scoreBar0 { 
+    background-image: url("/assets/score-bar_0.svg");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+}
+
+.scoreBar1 { 
+    background-image: url("/assets/score-bar_1.svg");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+}
+
+.scoreBar2 { 
+    background-image: url("/assets/score-bar_2.svg");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+}
+
+.scoreBar3 { 
+    background-image: url("/assets/score-bar_3.svg");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+}
+
+.scoreBar4 { 
+    background-image: url("/assets/score-bar_4.svg");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+}
+
+.scoreBar5 { 
+    background-image: url("/assets/score-bar_5.svg");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+}
+
+.scoreBar6 { 
+    background-image: url("/assets/score-bar_6.svg");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+}
+
+.scoreBar7 { 
+    background-image: url("/assets/score-bar_7.svg");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+}
+
+.scoreBar8 { 
+    background-image: url("/assets/score-bar_8.svg");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+}
+
+.scoreBar9 { 
+    background-image: url("/assets/score-bar_9.svg");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+}
+.scoreBar10 { 
+    background-image: url("/assets/score-bar_10.svg");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+}
+.scoreBar11 { 
+    background-image: url("/assets/score-bar_11.svg");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+}
+
+.scoreBar12 { 
+    background-image: url("/assets/score-bar_12.svg");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+}
+
+.scoreBar13 { 
+    background-image: url("/assets/score-bar_13.svg");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+}
+
+.scoreBar14 { 
+    background-image: url("/assets/score-bar_14.svg");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+}
+
+.scoreBar15 { 
+    background-image: url("/assets/score-bar_15.svg");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+}
+
+.scoreBar16 { 
+    background-image: url("/assets/score-bar_16.svg");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+}
+
+.scoreBar17 { 
+    background-image: url("/assets/score-bar_17.svg");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+}
+
+.scoreBar18 { 
+    background-image: url("/assets/score-bar_18.svg");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+}
+
+.scoreBar19 { 
+    background-image: url("/assets/score-bar_19.svg");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+}
+
+.scoreBar20 { 
+    background-image: url("/assets/score-bar_20.svg");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+}
+
+/* sprites */
+#a_container1 {
+    position: absolute;
+}
+
+#a_sprite1 {
+
+    width: 7vw;
+    height: 6vw;
+    background-image: url("/assets/firefly.svg");
+    background-size: 95%;
+}
+
+
+#a_container2 {
+    position: absolute;
+}
+
+#a_sprite2 {
+    width: 7vw;
+    height: 6vw;
+    background-image: url("/assets/firefly.svg");
+    background-size: 90%;
+}
+
+#a_container3 {
+    position: absolute;
+}
+
+#a_sprite3 {
+    width: 7vw;
+    height: 6vw;
+    background-image: url("/assets/firefly.svg");
+    background-size: 95%;
+}
+
+#ghost {
+    position: absolute;
+    /* border: 1px blueviolet solid; */
+}
+
+#ghost_sprite {
+    /* width:100%;
+    height:100%; */ 
+    width: 7vw;
+    height: 6vw;
+    background-image: url("/assets/ghost.svg");
+    background-size: 105%;
+}
+
+#ghost2 {
+    position: absolute;
+    /* border: 1px blueviolet solid; */
+}
+
+#ghost_sprite2 {
+    /* width:100%;
+    height:100%; */ 
+    width: 7vw;
+    height: 6vw;
+    background-image: url("/assets/ghost.svg");
+    background-size: 105%;
+}
+#ghost3 {
+    position: absolute;
+    /* border: 1px blueviolet solid; */
+}
+
+#ghost_sprite3 {
+    /* width:100%;
+    height:100%; */ 
+    width: 7vw;
+    height: 6vw;
+    background-image: url("/assets/ghost.svg");
+    background-size: 105%;
+}
+#potion {
+    position: absolute;
+    /* border: 1px greenyellow solid; */
+}
+
+#potion_sprite {
+    width: 7vw;
+    height: 6vw;
+    background-image: url("/assets/potion.svg");
+    background-size: 85%;
+    background-repeat: no-repeat;
+}
+
+/* positions */
+
+
+.position1 {
+    top: 5vw;
+    left: 68vw;
+}
+.position2 {
+    top: 8vw;
+    left: 75vw;
+}
+.position3 {
+    top: 13vw;
+    left: 65vw;
+}
+.position4 {
+    top: 17vw;
+    left: 70vw;
+}
+.position5 {
+    top: 23vw;
+    left: 69vw;
+}
+.position6 {
+    top: 27vw;
+    left: 65vw;
+}
+
+/* animations */
+
+.moveLeft1 {
+    animation: moveLeft 5.5s .5s ease-out infinite;
+}
+
+.moveLeft2 {
+    animation: moveLeft 4s 1s linear infinite;
+}
+
+.moveLeft3 {
+    animation: moveLeft 6s 1.2s ease-in-out infinite;
+}
+
+.moveLeft4 {
+    animation: moveLeft 5s .1s ease-in infinite;
+}
+.moveLeft5 {
+    animation: moveLeft 4.5s .8s linear infinite;
+}
+
+
+@keyframes moveLeft {
+    to {
+        transform: translateX(-100vw);
+    }
+}
+
+.firefly-glow {
+    animation: glow 1s 1;
+}
+
+@keyframes glow {
+
+    0%,
+    100% {
+        filter: brightness(100%) drop-shadow(0 0 -10px #ffec00);
+        transform: scale(0, 0);
+    }
+
+    50% {
+        filter: brightness(130%) drop-shadow(0 0 40px #ffec00);
+        transform: scale(1.2, 1.2);
+    }
+}
+
+.glow1 {
+    animation: glow1 1.5s infinite;
+}
+
+@keyframes glow1 {
+
+    0%,
+    100% {
+        filter: brightness(100%) drop-shadow(0 0 -10px #ffec00);
+        transform: scale(0.9, 0.9);
+    }
+
+    50% {
+        filter: brightness(130%) drop-shadow(0 0 40px #ffec00);
+        transform: scale(1.1, 1.1);
+    }
+}
+
+.ghost-dissapear {
+    opacity: 100%;
+    animation: ghost-dissapear 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes ghost-dissapear {
+    to {
+    transform: rotate(-1turn);
+    transform-origin: bottom left;
+    transition: transform 5s;
+    opacity: 0;
+    }
+}
+.potion-dissapear {
+    opacity: 100%;
+    animation: potion-dissapear 2s;
+}
+@keyframes potion-dissapear {
+    to {
+        opacity: 0;
+        transform: translateY(-80vw);
+    }
+}
+
+.paused {
+    animation-play-state: paused;
+}   
+
+@media only screen and (max-width: 700px) {
+    #main-game {
+        grid-template-areas: "game"
+            "info";
+    }
+
+    #screen {
+        width: 90vw;
+        height: 54vw;
+    }
+
+    aside {
+        margin-left: 25px;
+    }
+}

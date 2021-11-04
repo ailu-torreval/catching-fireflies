@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catching Fireflies</title>
+    <link rel="stylesheet" href="css1/game-stylesheet.css">
+    <link rel="icon" href="data:;base64,=">
+</head>
+
+<body>
+    <header>
+        <nav id="global-nav">
+            <ul>
+                <li><a href="/f-game.html">Game</a></li>
+                <li><a href="/asset-list.html">Assets</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main-game">
+        <section id="screen">
+            <div id="game" class="hidden">
+                <div id="game_background"></div>
+                <div id="game_sprites">
+                <div id="a_container1">
+                    <div id="a_sprite1"></div>
+                </div>
+                <div id="a_container2">
+                    <div id="a_sprite2"></div>
+                </div>
+                <div id="a_container3">
+                    <div id="a_sprite3"></div>
+                </div>
+                <div id="ghost">
+                    <div id="ghost_sprite"></div>
+                </div>
+                <div id="ghost2">
+                    <div id="ghost_sprite2"></div>
+                </div>
+                <div id="ghost3">
+                    <div id="ghost_sprite3"></div>
+                </div>
+                <div id="potion">
+                    <div id="potion_sprite"></div>
+                </div>
+                </div>
+                <div id="game_foreground" class="hidden"></div>
+                <div id="game_ui">
+                    <div id="score_board"><span id="scoreboard">0</span>/20</div>
+                    <div id="time_board" ></div>
+                    <div id="health_board"><span id="lives">3</span> lives</div>
+                </div>
+                <div id="settings" class="hidden"></div>
+                <div id="music-on" class="hidden"></div>
+                <div id="music-off" class="hidden"></div>
+                <div id="sound-on" class="hidden"></div>
+                <div id="sound-off" class="hidden"></div> 
+                <div id="load-game" class="hidden"></div>
+                <div id="blur" class="hidden"></div>
+                <div id="title_screen" class="hidden">
+                    <div id="play"></div>
+                    <div id="how-to-play"></div>
+                    <div id="intromusic-on" class="hidden"></div>
+                    <div id="intromusic-off" class="hidden"></div>
+                </div>
+                <div id="instructions" class="hidden">
+                    <div id="close-button"></div>
+                    <div id="instructions-txt">
+                        Help Koki to catch 20 fireflies for her jar "lantern".<br>
+                        But be careful! The Forest Spirits are wandering during the night, and if you disturb them you will be CURSED!<br>
+                        You can take potion to restore your health.
+                    </div>
+                    <div id="music-on" class="hidden"></div>
+                    <div id="x-instructions"></div>
+                    <div id="instructions-deco"></div>
+                    <div id="lets-play"></div>
+                    <div id="intro-music-on" class="hidden"></div>
+                    <div id="intro-music-off" class="hidden"></div>
+                </div>
+                <div id="game_over" class="hidden">
+                    <div id="oh-no-txt"> Oh no! you ran out of potion...</div>
+                    <div id="haunted-txt">The Forest Spirits will haunt you everywhere...</div>
+                    <div id="try_again"></div>
+                </div>
+                <div id="win_game" class="hidden">
+                    <div id="win-txt">Koki's jar looks beatiful! Thank You!!</div>
+                    <div id="play-again"></div>
+                </div>
+                <div id="time_over" class="hidden">
+                    <div id="time-out-txt">You don't have enough fireflies to en-<br>light Koki's lantern. Keep trying!</div>
+                    <div id="try-again"></div>
+                </div>
+            </div>
+        </section>
+        <aside id="gameinfo">In this game you have to help Koki, our main character, to catch fireflies, so she can fill up her jar and thus she has a beatiful lantern! But you have to be careful, there are Spirits in the forest ready to curse you if you touch them.
+            <p>This game was created by Ailin Torre Val in April - May 2021 as part of the course 'Basic Animation' at Copenhagen School of Design and Technology.</p>
+            <p>Copyright by Ailin Torre Val <br>
+                All music and sounds belong to <a href="https://www.zapsplat.com">www.zapsplat.com</a></p>
+        </aside>
+    </main>
+    <audio id="intro-music-a" src="/assets/intro-song-a.m4a"></audio> 
+    <audio id="intro-music1" src="/assets/intro-song1.m4a"></audio>
+    <audio id="firefly-sound" src="/assets/firefly-sound.mp3"></audio>
+    <audio id="ghost-sound" src="/assets/ghost-sound-a.mp3"></audio>
+    <audio id="potion-sound" src="/assets/potion-sound.mp3"></audio>
+    <audio id="game-over-sound1" src="/assets/game-over-sound1.mp3"></audio>
+    <audio id="time-over-sound1" src="/assets/time-over-sound1.mp3"></audio>
+    <audio id="win-sound1" src="/assets/win-sound1.mp3"></audio>
+    <script src="javascript/game-js.js"></script>
+</body>
+</html>
